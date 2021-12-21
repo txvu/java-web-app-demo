@@ -17,6 +17,8 @@ public class HelloServlet extends HttpServlet
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException
 	{
+		System.out.println("GET request for hello-servlet page");
+
 		response.setContentType("text/html");
 
 		// Hello
