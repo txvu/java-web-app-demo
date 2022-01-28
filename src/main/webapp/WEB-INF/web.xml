@@ -3,16 +3,12 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
          version="5.0">
-    
+
+<!--Mapping for XML servlet-->
     <servlet>
         <servlet-name>XMLServlet</servlet-name>
         <servlet-class>com.example.java_web_app_demo.XMLServlet</servlet-class>
     </servlet>
-    
-    <servlet-mapping>
-        <servlet-name>XMLServlet</servlet-name>
-        <url-pattern>/xml</url-pattern>
-    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>XMLServlet</servlet-name>
         <url-pattern>/another-xml</url-pattern>
@@ -21,5 +17,25 @@
         <servlet-name>XMLServlet</servlet-name>
         <url-pattern>/xml/sub-dir</url-pattern>
     </servlet-mapping>
+
+<!--Mapping for Param servlet-->
+    <servlet>
+        <servlet-name>ParamServlet</servlet-name>
+        <servlet-class>com.example.java_web_app_demo.ParamServlet</servlet-class>
+        <init-param>
+            <param-name>copyRightYear</param-name>
+            <param-value>2020</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ParamServlet</servlet-name>
+        <url-pattern>/param</url-pattern>
+    </servlet-mapping>
+
+
+    <context-param>
+        <param-name>authorizationToken</param-name>
+        <param-value>1234swag</param-value>
+    </context-param>
 
 </web-app>
