@@ -12,7 +12,7 @@ public class NameServlet extends HttpServlet
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
-		// Sample link: http://localhost:8082/name?firstName=Isaac&lastName=Vu&age=29
+		// Sample link: localhost:8082/name?firstName=Isaac&lastName=Vu&age=29
 
 		String firstName = request.getParameter("firstName");
 		String lastName = request.getParameter("lastName");
@@ -48,7 +48,8 @@ public class NameServlet extends HttpServlet
 			request.setAttribute("age", age);
 		}
 
-		getServletContext().getRequestDispatcher("/name.jsp").forward(request, response);
+//		getServletContext().getRequestDispatcher("/name.jsp").forward(request, response);
+		getServletContext().getRequestDispatcher("/other").forward(request, response);
 	}
 
 	@Override
