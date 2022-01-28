@@ -21,4 +21,5 @@
         <servlet-name>XMLServlet</servlet-name>
         <url-pattern>/xml/sub-dir</url-pattern>
     </servlet-mapping>
+
 </web-app>
